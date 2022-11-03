@@ -1,16 +1,8 @@
 import fs from "fs";
 import { v4 as uuidv4 } from 'uuid';
+import flights from "../models/flights.js"
 
 const controller = {}
-let flights = [
-    {
-        "title":"Flight to Cokyo",
-        "time":"4am",
-        "price":400000,
-        "date":"19-10-2022",
-        "id":1
-    }
-];
 
 controller.listFlights = (req,res)=>{
     res.send(flights);
