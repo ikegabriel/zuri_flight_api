@@ -1,10 +1,12 @@
 import express from "express";
 import bodyParser from "body-parser";
 import flightRoutes from './routes/flight.js'
+import cors from "cors"
 
 const app = express();
 const PORT = 4000;
 
+app.use(cors())
 app.use(bodyParser.json());
 
 app.use('/flight', flightRoutes)
